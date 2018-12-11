@@ -1,0 +1,13 @@
+{
+  "name": "static-project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "static-server": "^2.2.1"
+  }
+}
