@@ -3,6 +3,7 @@
 пользователем.
 В верхней части странички текстовое поле ввода, использующее [Google Place Autocomplete](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete?hl=ru) для автокомплита названия города.
 При выборе города из списка необходимо получать погоду [5 day / 3 hour forecast](https://openweathermap.org/forecast5) с погодного сервиса (Weather API), используя географические координаты выбранного города (latitude, longitude) и выводить результаты в таблице под полем ввода
+
 Date | Temperature (Celsium) | Weather condition
 :------------- |:-------:| ----------:
 05.11.17 17:00 | +3      | Rain
