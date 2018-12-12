@@ -42,6 +42,8 @@ function init() {
     let data = JSON.parse(xhr.responseText);
     console.log(data);
     let row = document.createElement('tr');
+    let thead = document.createElement('thead');
+    thead.classList.add('thead');
 
     let date = document.createElement('td');
     date.innerHTML = 'Date';
@@ -56,15 +58,20 @@ function init() {
     row.appendChild(temp);
     row.appendChild(cond);
 
-    weather.appendChild(row);
+    thead.appendChild(row);
+
+    weather.appendChild(thead);
+
+    let tbody = document.createElement('tbody');
+
     data.list.forEach( (item) => {
-      let rowValue = document.createElement('tr');
+     let rowValue = document.createElement('tr');
 
      let dateValue = document.createElement('td');
      dateValue.innerHTML= item.dt_txt;
      
      let tempValue = document.createElement('td');
-     tempValue.innerHTML= item.main.temp;
+     tempValue.innerHTML = Math.round(item.main.temp - 273);
 
      let condValue = document.createElement('td');
      condValue.innerHTML = item.weather[0].main;
@@ -73,13 +80,11 @@ function init() {
      rowValue.appendChild(tempValue);
      rowValue.appendChild(condValue);
      
-     weather.appendChild(rowValue);
+     tbody.appendChild(rowValue);
    });
+   weather.appendChild(tbody);
   }
  });
 }
 
-
 init();
-
-

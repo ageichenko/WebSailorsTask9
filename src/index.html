@@ -8,16 +8,18 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-	<form id="pac-container">
-		<div class="form-group">
-		<input id="pac-input" type="text"
-		placeholder="Enter a location">
+	<div class="container">
+		<form id="pac-container">
+			<h1 class="header"><span class="badge badge-primary">Weather in your town</span></h1>
+			<div class="form-group">
+				<input id="pac-input" type="text" placeholder="Enter a location">
+			</div>
+		</form>
+		<div class="table-weather">
+			<table id="weather" class="container table table-striped"></table>
+		</div>
 	</div>
-	</form>
-	<table id="weather" class="table">
-	</table>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4RjQvK8Hnp65hjd8qr19JqDU8KKvYIQQ&libraries=places"></script>
 	<script src="./index.js"></script>
-	    
 </body>
 </html>
